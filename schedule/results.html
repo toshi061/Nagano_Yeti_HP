@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nagano Yetiの試合結果。大会ごとの試合成績、最終順位、スコアを掲載しています。">
+  <meta name="keywords" content="ハンドボール,長野県,試合結果,スコア,成績,大会">
+  <title>試合結果 - Nagano Yeti</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/schedule.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="../images/logo/Yetiロゴ.jpg" alt="Nagano Yeti">
+        </div>
+        <span>Nagano Yeti</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">トップ</a></li>
+          <li class="nav-item"><a href="../team/index.html" class="nav-link">チーム</a></li>
+          <li class="nav-item"><a href="matches.html" class="nav-link active">試合・練習</a></li>
+          <li class="nav-item"><a href="../news/index.html" class="nav-link">ニュース</a></li>
+          <li class="nav-item"><a href="../contact/index.html" class="nav-link">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="container">
+        <h1>試合結果</h1>
+        <p>大会ごとの試合成績と最終順位</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- サブナビゲーション -->
+      <div class="sub-nav">
+        <a href="matches.html" class="sub-nav-link">試合スケジュール</a>
+        <a href="results.html" class="sub-nav-link active">試合結果</a>
+        <a href="practice.html" class="sub-nav-link">練習カレンダー</a>
+      </div>
+
+      <!-- 大会カードグリッド -->
+      <section class="section">
+        <div class="tournament-grid">
+          <!-- 2025年 冬季大会 カード -->
+          <div class="tournament-card" data-tournament="winter2025">
+            <div class="tournament-card-header">
+              <div class="tournament-icon">❄️</div>
+              <h3 class="tournament-card-title">2025年 冬季大会</h3>
+            </div>
+            <div class="tournament-card-body">
+              <div class="tournament-date">2025年12月開催</div>
+              <div class="tournament-result rank-2">
+                <span class="result-rank">準優勝</span>
+                <span class="result-detail">2位 / 4チーム</span>
+              </div>
+              <div class="tournament-record">
+                <span class="record-wins">2勝</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">1敗</span>
+              </div>
+            </div>
+            <div class="tournament-card-footer">
+              <span class="view-detail-text">詳細を見る →</span>
+            </div>
+          </div>
+
+          <!-- 2024年 秋季大会 カード -->
+          <div class="tournament-card champion" data-tournament="autumn2024">
+            <div class="tournament-card-header">
+              <div class="tournament-icon">🍂</div>
+              <h3 class="tournament-card-title">2024年 秋季大会</h3>
+            </div>
+            <div class="tournament-card-body">
+              <div class="tournament-date">2024年11月開催</div>
+              <div class="tournament-result rank-1">
+                <span class="result-rank">🏆 優勝</span>
+                <span class="result-detail">1位 / 4チーム</span>
+              </div>
+              <div class="tournament-record">
+                <span class="record-wins">3勝</span>
+                <span class="record-separator">-</span>
+                <span class="record-draws">1分</span>
+              </div>
+            </div>
+            <div class="tournament-card-footer">
+              <span class="view-detail-text">詳細を見る →</span>
+            </div>
+          </div>
+
+          <!-- 2024年 夏季大会 カード -->
+          <div class="tournament-card" data-tournament="summer2024">
+            <div class="tournament-card-header">
+              <div class="tournament-icon">☀️</div>
+              <h3 class="tournament-card-title">2024年 夏季大会</h3>
+            </div>
+            <div class="tournament-card-body">
+              <div class="tournament-date">2024年7月開催</div>
+              <div class="tournament-result rank-3">
+                <span class="result-rank">3位</span>
+                <span class="result-detail">3位 / 4チーム</span>
+              </div>
+              <div class="tournament-record">
+                <span class="record-wins">1勝</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">2敗</span>
+              </div>
+            </div>
+            <div class="tournament-card-footer">
+              <span class="view-detail-text">詳細を見る →</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-40">
+          <a href="matches.html" class="btn btn-outline">今後の試合スケジュールを見る</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- モーダル: 2025年 冬季大会 -->
+    <div class="tournament-modal" id="modal-winter2025">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="閉じる">&times;</button>
+        <div class="modal-header">
+          <div class="modal-tournament-icon">❄️</div>
+          <h2 class="modal-title">2025年 冬季大会</h2>
+          <p class="modal-subtitle">2025年12月開催</p>
+        </div>
+        <div class="modal-body">
+          <!-- 最終順位 -->
+          <div class="tournament-standings">
+            <h3 class="standings-title">最終順位</h3>
+            <div class="standings-table-wrapper">
+              <table class="standings-table">
+                <thead>
+                  <tr>
+                    <th>順位</th>
+                    <th>チーム名</th>
+                    <th>試合数</th>
+                    <th>勝</th>
+                    <th>敗</th>
+                    <th>得点</th>
+                    <th>失点</th>
+                    <th>得失差</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="team-highlight">
+                    <td class="rank rank-2">2位</td>
+                    <td class="team-name">Nagano Yeti</td>
+                    <td>3</td>
+                    <td class="win-count">2</td>
+                    <td class="loss-count">1</td>
+                    <td>101</td>
+                    <td>92</td>
+                    <td class="positive">+9</td>
+                  </tr>
+                  <tr>
+                    <td class="rank rank-1">1位</td>
+                    <td class="team-name">松本ファイターズ</td>
+                    <td>3</td>
+                    <td class="win-count">3</td>
+                    <td class="loss-count">0</td>
+                    <td>105</td>
+                    <td>88</td>
+                    <td class="positive">+17</td>
+                  </tr>
+                  <tr>
+                    <td class="rank rank-3">3位</td>
+                    <td class="team-name">上田イーグルス</td>
+                    <td>3</td>
+                    <td class="win-count">1</td>
+                    <td class="loss-count">2</td>
+                    <td>92</td>
+                    <td>98</td>
+                    <td class="negative">-6</td>
+                  </tr>
+                  <tr>
+                    <td class="rank">4位</td>
+                    <td class="team-name">飯田ライジング</td>
+                    <td>3</td>
+                    <td class="win-count">0</td>
+                    <td class="loss-count">3</td>
+                    <td>85</td>
+                    <td>105</td>
+                    <td class="negative">-20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 全試合結果 -->
+          <h3 class="results-section-title">全試合結果</h3>
+          <div class="results-list">
+            <!-- 試合1 - 勝利 -->
+            <div class="result-card win">
+              <div class="result-header">
+                <span class="result-league">冬季大会 第3試合</span>
+                <span class="result-status win">勝利</span>
+              </div>
+              <div class="result-main">
+                <div class="result-date">
+                  <div class="result-date-text">2025.12.15</div>
+                  <div class="result-venue">長野市総合体育館</div>
+                </div>
+                <div class="result-score">
+                  <div class="team-result home win">
+                    <div class="team-name-result">Nagano Yeti</div>
+                    <div class="team-score">32</div>
+                  </div>
+                  <div class="score-separator">-</div>
+                  <div class="team-result away">
+                    <div class="team-score">28</div>
+                    <div class="team-name-result">上田イーグルス</div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-footer">
+                <div class="result-stats">
+                  <div class="stat-badge">
+                    <span class="stat-label">得点王</span>
+                    <span class="stat-value">佐藤 健太 (9得点)</span>
+                  </div>
+                  <div class="stat-badge">
+                    <span class="stat-label">MVP</span>
+                    <span class="stat-value">鈴木 誠 (GK)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 試合2 - 敗北 -->
+            <div class="result-card loss">
+              <div class="result-header">
+                <span class="result-league">冬季大会 第2試合</span>
+                <span class="result-status loss">敗北</span>
+              </div>
+              <div class="result-main">
+                <div class="result-date">
+                  <div class="result-date-text">2025.12.08</div>
+                  <div class="result-venue">松本市総合体育館</div>
+                </div>
+                <div class="result-score">
+                  <div class="team-result away">
+                    <div class="team-name-result">松本ファイターズ</div>
+                    <div class="team-score">35</div>
+                  </div>
+                  <div class="score-separator">-</div>
+                  <div class="team-result home loss">
+                    <div class="team-score">31</div>
+                    <div class="team-name-result">Nagano Yeti</div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-footer">
+                <div class="result-stats">
+                  <div class="stat-badge">
+                    <span class="stat-label">得点王</span>
+                    <span class="stat-value">山田 太郎 (8得点)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 試合3 - 勝利 -->
+            <div class="result-card win">
+              <div class="result-header">
+                <span class="result-league">冬季大会 第1試合</span>
+                <span class="result-status win">勝利</span>
+              </div>
+              <div class="result-main">
+                <div class="result-date">
+                  <div class="result-date-text">2025.12.01</div>
+                  <div class="result-venue">長野市総合体育館</div>
+                </div>
+                <div class="result-score">
+                  <div class="team-result home win">
+                    <div class="team-name-result">Nagano Yeti</div>
+                    <div class="team-score">38</div>
+                  </div>
+                  <div class="score-separator">-</div>
+                  <div class="team-result away">
+                    <div class="team-score">29</div>
+                    <div class="team-name-result">飯田ライジング</div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-footer">
+                <div class="result-stats">
+                  <div class="stat-badge">
+                    <span class="stat-label">得点王</span>
+                    <span class="stat-value">佐藤 健太 (12得点)</span>
+                  </div>
+                  <div class="stat-badge">
+                    <span class="stat-label">MVP</span>
+                    <span class="stat-value">佐藤 健太 (CB)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 大会成績サマリー -->
+          <div class="tournament-summary">
+            <h3>大会成績</h3>
+            <div class="summary-stats">
+              <div class="summary-item">
+                <span class="summary-label">順位</span>
+                <span class="summary-value rank-2">2位</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">戦績</span>
+                <span class="summary-value">2勝1敗</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">総得点</span>
+                <span class="summary-value">101点</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">総失点</span>
+                <span class="summary-value">92点</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- モーダル: 2024年 秋季大会 -->
+    <div class="tournament-modal" id="modal-autumn2024">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="閉じる">&times;</button>
+        <div class="modal-header">
+          <div class="modal-tournament-icon">🍂</div>
+          <h2 class="modal-title">2024年 秋季大会</h2>
+          <p class="modal-subtitle">2024年11月開催</p>
+        </div>
+        <div class="modal-body">
+          <!-- 最終順位 -->
+          <div class="tournament-standings">
+            <h3 class="standings-title">最終順位</h3>
+            <div class="standings-table-wrapper">
+              <table class="standings-table">
+                <thead>
+                  <tr>
+                    <th>順位</th>
+                    <th>チーム名</th>
+                    <th>試合数</th>
+                    <th>勝</th>
+                    <th>敗</th>
+                    <th>分</th>
+                    <th>得点</th>
+                    <th>失点</th>
+                    <th>得失差</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="team-highlight">
+                    <td class="rank rank-1">1位</td>
+                    <td class="team-name">Nagano Yeti</td>
+                    <td>4</td>
+                    <td class="win-count">3</td>
+                    <td class="loss-count">0</td>
+                    <td>1</td>
+                    <td>132</td>
+                    <td>116</td>
+                    <td class="positive">+16</td>
+                  </tr>
+                  <tr>
+                    <td class="rank rank-2">2位</td>
+                    <td class="team-name">諏訪スターズ</td>
+                    <td>4</td>
+                    <td class="win-count">2</td>
+                    <td class="loss-count">1</td>
+                    <td>1</td>
+                    <td>125</td>
+                    <td>120</td>
+                    <td class="positive">+5</td>
+                  </tr>
+                  <tr>
+                    <td class="rank rank-3">3位</td>
+                    <td class="team-name">佐久ドラゴンズ</td>
+                    <td>4</td>
+                    <td class="win-count">1</td>
+                    <td class="loss-count">2</td>
+                    <td>1</td>
+                    <td>118</td>
+                    <td>125</td>
+                    <td class="negative">-7</td>
+                  </tr>
+                  <tr>
+                    <td class="rank">4位</td>
+                    <td class="team-name">上田イーグルス</td>
+                    <td>4</td>
+                    <td class="win-count">1</td>
+                    <td class="loss-count">3</td>
+                    <td>0</td>
+                    <td>112</td>
+                    <td>126</td>
+                    <td class="negative">-14</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 全試合結果 -->
+          <h3 class="results-section-title">全試合結果</h3>
+          <div class="results-list">
+            <div class="result-card draw">
+              <div class="result-header">
+                <span class="result-league">秋季大会 第4試合</span>
+                <span class="result-status draw">引き分け</span>
+              </div>
+              <div class="result-main">
+                <div class="result-date">
+                  <div class="result-date-text">2024.11.24</div>
+                  <div class="result-venue">諏訪市体育館</div>
+                </div>
+                <div class="result-score">
+                  <div class="team-result away">
+                    <div class="team-name-result">諏訪スターズ</div>
+                    <div class="team-score">30</div>
+                  </div>
+                  <div class="score-separator">-</div>
+                  <div class="team-result home draw">
+                    <div class="team-score">30</div>
+                    <div class="team-name-result">Nagano Yeti</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="result-card win">
+              <div class="result-header">
+                <span class="result-league">秋季大会 第3試合</span>
+                <span class="result-status win">勝利</span>
+              </div>
+              <div class="result-main">
+                <div class="result-date">
+                  <div class="result-date-text">2024.11.17</div>
+                  <div class="result-venue">長野市総合体育館</div>
+                </div>
+                <div class="result-score">
+                  <div class="team-result home win">
+                    <div class="team-name-result">Nagano Yeti</div>
+                    <div class="team-score">34</div>
+                  </div>
+                  <div class="score-separator">-</div>
+                  <div class="team-result away">
+                    <div class="team-score">27</div>
+                    <div class="team-name-result">佐久ドラゴンズ</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 大会成績サマリー -->
+          <div class="tournament-summary">
+            <h3>大会成績</h3>
+            <div class="summary-stats">
+              <div class="summary-item">
+                <span class="summary-label">順位</span>
+                <span class="summary-value rank-1">優勝</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">戦績</span>
+                <span class="summary-value">3勝0敗1分</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">総得点</span>
+                <span class="summary-value">132点</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">総失点</span>
+                <span class="summary-value">116点</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- モーダル: 2024年 夏季大会 -->
+    <div class="tournament-modal" id="modal-summer2024">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="閉じる">&times;</button>
+        <div class="modal-header">
+          <div class="modal-tournament-icon">☀️</div>
+          <h2 class="modal-title">2024年 夏季大会</h2>
+          <p class="modal-subtitle">2024年7月開催</p>
+        </div>
+        <div class="modal-body">
+          <div class="tournament-standings">
+            <h3 class="standings-title">最終順位</h3>
+            <div class="standings-table-wrapper">
+              <table class="standings-table">
+                <thead>
+                  <tr>
+                    <th>順位</th>
+                    <th>チーム名</th>
+                    <th>試合数</th>
+                    <th>勝</th>
+                    <th>敗</th>
+                    <th>得点</th>
+                    <th>失点</th>
+                    <th>得失差</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="rank rank-1">1位</td>
+                    <td class="team-name">松本ファイターズ</td>
+                    <td>3</td>
+                    <td class="win-count">3</td>
+                    <td class="loss-count">0</td>
+                    <td>98</td>
+                    <td>82</td>
+                    <td class="positive">+16</td>
+                  </tr>
+                  <tr class="team-highlight">
+                    <td class="rank rank-3">3位</td>
+                    <td class="team-name">Nagano Yeti</td>
+                    <td>3</td>
+                    <td class="win-count">1</td>
+                    <td class="loss-count">2</td>
+                    <td>89</td>
+                    <td>93</td>
+                    <td class="negative">-4</td>
+                  </tr>
+                  <tr>
+                    <td class="rank rank-2">2位</td>
+                    <td class="team-name">飯田ライジング</td>
+                    <td>3</td>
+                    <td class="win-count">2</td>
+                    <td class="loss-count">1</td>
+                    <td>95</td>
+                    <td>90</td>
+                    <td class="positive">+5</td>
+                  </tr>
+                  <tr>
+                    <td class="rank">4位</td>
+                    <td class="team-name">上田イーグルス</td>
+                    <td>3</td>
+                    <td class="win-count">0</td>
+                    <td class="loss-count">3</td>
+                    <td>78</td>
+                    <td>95</td>
+                    <td class="negative">-17</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tournament-summary">
+            <h3>大会成績</h3>
+            <div class="summary-stats">
+              <div class="summary-item">
+                <span class="summary-label">順位</span>
+                <span class="summary-value rank-3">3位</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">戦績</span>
+                <span class="summary-value">1勝2敗</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">総得点</span>
+                <span class="summary-value">89点</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">総失点</span>
+                <span class="summary-value">93点</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Nagano Yeti</h3>
+          <p>〒380-0000<br>長野県長野市○○町1-2-3</p>
+          <p>TEL: 026-XXX-XXXX<br>Email: info@nagano-handball.jp</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>サイトマップ</h3>
+          <div class="footer-links">
+            <a href="../index.html">トップ</a>
+            <a href="../team/index.html">チーム</a>
+            <a href="matches.html">試合・練習</a>
+            <a href="../news/index.html">ニュース</a>
+            <a href="../contact/index.html">お問い合わせ</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>SNS・お問い合わせ</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+          <div class="footer-links mt-20">
+            <a href="../contact/index.html">お問い合わせフォーム</a>
+            <a href="../sponsors/partnership.html">スポンサー募集</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Nagano Yeti All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script>
+    // 大会カードクリック → モーダル表示
+    document.addEventListener('DOMContentLoaded', () => {
+      const tournamentCards = document.querySelectorAll('.tournament-card');
+      const modals = document.querySelectorAll('.tournament-modal');
+
+      // カードクリックでモーダル表示
+      tournamentCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const tournament = card.dataset.tournament;
+          const modal = document.getElementById(`modal-${tournament}`);
+          if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // スクロール無効化
+          }
+        });
+      });
+
+      // モーダルを閉じる処理
+      modals.forEach(modal => {
+        const closeBtn = modal.querySelector('.modal-close');
+        const overlay = modal.querySelector('.modal-overlay');
+
+        // 閉じるボタン
+        closeBtn.addEventListener('click', () => {
+          modal.classList.remove('active');
+          document.body.style.overflow = ''; // スクロール有効化
+        });
+
+        // オーバーレイクリック
+        overlay.addEventListener('click', () => {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // ESCキーでモーダルを閉じる
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          modals.forEach(modal => {
+            if (modal.classList.contains('active')) {
+              modal.classList.remove('active');
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

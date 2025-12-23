@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nagano Yetiの練習カレンダー。練習日程と会場情報を掲載しています。">
+  <meta name="keywords" content="ハンドボール,長野県,練習,カレンダー,スケジュール">
+  <title>練習カレンダー - Nagano Yeti</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/schedule.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="../images/logo/Yetiロゴ.jpg" alt="Nagano Yeti">
+        </div>
+        <span>Nagano Yeti</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">トップ</a></li>
+          <li class="nav-item"><a href="../team/index.html" class="nav-link">チーム</a></li>
+          <li class="nav-item"><a href="matches.html" class="nav-link active">試合・練習</a></li>
+          <li class="nav-item"><a href="../news/index.html" class="nav-link">ニュース</a></li>
+          <li class="nav-item"><a href="../contact/index.html" class="nav-link">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="container">
+        <h1>練習カレンダー</h1>
+        <p>練習日程と会場情報</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- サブナビゲーション -->
+      <div class="sub-nav">
+        <a href="matches.html" class="sub-nav-link">試合スケジュール</a>
+        <a href="results.html" class="sub-nav-link">試合結果</a>
+        <a href="practice.html" class="sub-nav-link active">練習カレンダー</a>
+      </div>
+
+      <!-- カレンダーセクション -->
+      <section class="section">
+        <div class="calendar-container">
+          <div class="calendar-header">
+            <button class="calendar-nav-btn" id="prevMonth">
+              <span>◀</span>
+            </button>
+            <h2 class="calendar-title" id="currentMonth">2025年 1月</h2>
+            <button class="calendar-nav-btn" id="nextMonth">
+              <span>▶</span>
+            </button>
+          </div>
+
+          <div class="calendar-weekdays">
+            <div class="weekday">日</div>
+            <div class="weekday">月</div>
+            <div class="weekday">火</div>
+            <div class="weekday">水</div>
+            <div class="weekday">木</div>
+            <div class="weekday">金</div>
+            <div class="weekday">土</div>
+          </div>
+
+          <div class="calendar-days" id="calendarDays">
+            <!-- カレンダーの日付がJavaScriptで動的に生成されます -->
+          </div>
+        </div>
+
+        <!-- カレンダー凡例 -->
+        <div class="calendar-legend">
+          <h3 class="legend-title">凡例</h3>
+          <div class="legend-items">
+            <div class="legend-item">
+              <span class="legend-color practice"></span>
+              <span class="legend-label">練習日</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color match"></span>
+              <span class="legend-label">試合日</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color event"></span>
+              <span class="legend-label">イベント</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 練習予定リスト -->
+      <section class="section" id="practice-list">
+        <h2 class="section-title">今後の練習予定</h2>
+        <div class="practice-list">
+          <div class="practice-item" id="practice-2025-01-15">
+            <div class="practice-date-block">
+              <div class="practice-month">1月</div>
+              <div class="practice-day">15</div>
+              <div class="practice-weekday">(水)</div>
+            </div>
+            <div class="practice-details">
+              <div class="practice-time">⏰ 19:00 - 21:00</div>
+              <div class="practice-venue">📍 長野市総合体育館</div>
+              <div class="practice-note">通常練習</div>
+            </div>
+          </div>
+
+          <div class="practice-item" id="practice-2025-01-18">
+            <div class="practice-date-block">
+              <div class="practice-month">1月</div>
+              <div class="practice-day">18</div>
+              <div class="practice-weekday">(土)</div>
+            </div>
+            <div class="practice-details">
+              <div class="practice-time">⏰ 14:00 - 17:00</div>
+              <div class="practice-venue">📍 長野市総合体育館</div>
+              <div class="practice-note">合同練習</div>
+            </div>
+          </div>
+
+          <div class="practice-item" id="practice-2025-01-22">
+            <div class="practice-date-block">
+              <div class="practice-month">1月</div>
+              <div class="practice-day">22</div>
+              <div class="practice-weekday">(水)</div>
+            </div>
+            <div class="practice-details">
+              <div class="practice-time">⏰ 19:00 - 21:00</div>
+              <div class="practice-venue">📍 長野市総合体育館</div>
+              <div class="practice-note">通常練習</div>
+            </div>
+          </div>
+
+          <div class="practice-item" id="practice-2025-01-25">
+            <div class="practice-date-block">
+              <div class="practice-month">1月</div>
+              <div class="practice-day">25</div>
+              <div class="practice-weekday">(土)</div>
+            </div>
+            <div class="practice-details">
+              <div class="practice-time">⏰ 14:00 - 17:00</div>
+              <div class="practice-venue">📍 長野市総合体育館</div>
+              <div class="practice-note">試合前調整</div>
+            </div>
+          </div>
+
+          <div class="practice-item" id="practice-2025-01-29">
+            <div class="practice-date-block">
+              <div class="practice-month">1月</div>
+              <div class="practice-day">29</div>
+              <div class="practice-weekday">(水)</div>
+            </div>
+            <div class="practice-details">
+              <div class="practice-time">⏰ 19:00 - 21:00</div>
+              <div class="practice-venue">📍 長野市総合体育館</div>
+              <div class="practice-note">通常練習</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 練習見学・体験について -->
+      <section class="section">
+        <h2 class="section-title">練習見学・体験について</h2>
+        <div class="practice-info-grid">
+          <div class="practice-info-card">
+            <div class="practice-info-icon">👀</div>
+            <h3 class="practice-info-title">見学について</h3>
+            <p class="practice-info-text">
+              練習の見学は随時受け付けております。事前連絡なしでも見学可能ですが、練習が中止になる場合もありますので、お問い合わせフォームまたはSNSからご連絡いただけると確実です。
+            </p>
+          </div>
+
+          <div class="practice-info-card">
+            <div class="practice-info-icon">🏃</div>
+            <h3 class="practice-info-title">体験参加について</h3>
+            <p class="practice-info-text">
+              体験参加も大歓迎です。運動のできる服装と室内シューズをご用意ください。ハンドボール経験がなくても問題ありません。事前にお問い合わせフォームからご連絡ください。
+            </p>
+          </div>
+
+          <div class="practice-info-card">
+            <div class="practice-info-icon">📧</div>
+            <h3 class="practice-info-title">お問い合わせ</h3>
+            <p class="practice-info-text">
+              練習に関するご質問やご不明な点がございましたら、お気軽にお問い合わせください。SNSのダイレクトメッセージでも受け付けております。
+            </p>
+            <a href="../contact/index.html" class="btn btn-primary">お問い合わせフォーム</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Nagano Yeti</h3>
+          <p>〒380-0000<br>長野県長野市○○町1-2-3</p>
+          <p>TEL: 026-XXX-XXXX<br>Email: info@nagano-handball.jp</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>サイトマップ</h3>
+          <div class="footer-links">
+            <a href="../index.html">トップ</a>
+            <a href="../team/index.html">チーム</a>
+            <a href="matches.html">試合・練習</a>
+            <a href="../news/index.html">ニュース</a>
+            <a href="../contact/index.html">お問い合わせ</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>SNS・お問い合わせ</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+          <div class="footer-links mt-20">
+            <a href="../contact/index.html">お問い合わせフォーム</a>
+            <a href="../sponsors/partnership.html">スポンサー募集</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Nagano Yeti All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script>
+    // 練習・試合データ（実際のデータに置き換えてください）
+    const scheduleData = {
+      '2025-01': {
+        practices: [5, 8, 15, 18, 22, 25, 29],
+        matches: [12, 26],
+        events: []
+      },
+      '2025-02': {
+        practices: [1, 5, 8, 12, 15, 19, 22, 26],
+        matches: [9, 23],
+        events: []
+      },
+      '2025-03': {
+        practices: [1, 5, 8, 12, 15, 19, 22, 26, 29],
+        matches: [16],
+        events: [2]
+      }
+    };
+
+    let currentYear = 2025;
+    let currentMonth = 0; // 0 = January
+
+    function renderCalendar(year, month) {
+      const calendarDays = document.getElementById('calendarDays');
+      const currentMonthTitle = document.getElementById('currentMonth');
+
+      // 月の最初の日と最後の日
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      const startingDayOfWeek = firstDay.getDay();
+
+      // タイトル更新
+      currentMonthTitle.textContent = `${year}年 ${month + 1}月`;
+
+      // カレンダーをクリア
+      calendarDays.innerHTML = '';
+
+      // スケジュールデータのキー
+      const scheduleKey = `${year}-${String(month + 1).padStart(2, '0')}`;
+      const monthData = scheduleData[scheduleKey] || { practices: [], matches: [], events: [] };
+
+      // 前月の空白日
+      for (let i = 0; i < startingDayOfWeek; i++) {
+        const emptyDay = document.createElement('div');
+        emptyDay.className = 'calendar-day empty';
+        calendarDays.appendChild(emptyDay);
+      }
+
+      // 各日付を生成
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dayElement = document.createElement('div');
+        dayElement.className = 'calendar-day';
+
+        const dayNumber = document.createElement('div');
+        dayNumber.className = 'day-number';
+        dayNumber.textContent = day;
+        dayElement.appendChild(dayNumber);
+
+        // 練習日かチェック
+        if (monthData.practices.includes(day)) {
+          const marker = document.createElement('div');
+          marker.className = 'day-marker practice';
+          marker.textContent = '練習';
+          dayElement.appendChild(marker);
+          dayElement.classList.add('has-practice');
+
+          // 練習日をクリック可能に
+          dayElement.style.cursor = 'pointer';
+          dayElement.addEventListener('click', () => {
+            const practiceId = `practice-${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            const practiceElement = document.getElementById(practiceId);
+            if (practiceElement) {
+              practiceElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              practiceElement.style.animation = 'highlight 1s ease';
+              setTimeout(() => {
+                practiceElement.style.animation = '';
+              }, 1000);
+            }
+          });
+        }
+
+        // 試合日かチェック
+        if (monthData.matches.includes(day)) {
+          const marker = document.createElement('div');
+          marker.className = 'day-marker match';
+          marker.textContent = '試合';
+          dayElement.appendChild(marker);
+          dayElement.classList.add('has-match');
+
+          // 試合日をクリック可能に（試合スケジュールページへリンク）
+          dayElement.style.cursor = 'pointer';
+          dayElement.addEventListener('click', () => {
+            window.location.href = 'matches.html';
+          });
+        }
+
+        // イベント日かチェック
+        if (monthData.events.includes(day)) {
+          const marker = document.createElement('div');
+          marker.className = 'day-marker event';
+          marker.textContent = 'イベント';
+          dayElement.appendChild(marker);
+          dayElement.classList.add('has-event');
+        }
+
+        // 今日の日付をハイライト
+        const today = new Date();
+        if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
+          dayElement.classList.add('today');
+        }
+
+        calendarDays.appendChild(dayElement);
+      }
+    }
+
+    // 前月ボタン
+    document.getElementById('prevMonth').addEventListener('click', () => {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      renderCalendar(currentYear, currentMonth);
+    });
+
+    // 次月ボタン
+    document.getElementById('nextMonth').addEventListener('click', () => {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      renderCalendar(currentYear, currentMonth);
+    });
+
+    // 初期表示
+    renderCalendar(currentYear, currentMonth);
+  </script>
+</body>
+</html>

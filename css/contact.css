@@ -1,0 +1,616 @@
+/* ==========================================
+   長野県ハンドボールクラブ - お問い合わせページスタイル
+   ========================================== */
+
+/* レイアウト */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-main {
+  min-width: 0;
+}
+
+/* フォーム */
+.form-intro {
+  background: var(--gray-100);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin-bottom: 40px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.form-intro p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.contact-form {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.form-label.required::after {
+  content: '*';
+  color: var(--secondary-color);
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+}
+
+.form-control.error {
+  border-color: var(--secondary-color);
+}
+
+select.form-control {
+  cursor: pointer;
+  background-color: var(--bg-white);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 5px;
+}
+
+.error-message {
+  display: block;
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* ラジオボタン */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.radio-label:hover {
+  background: var(--gray-200);
+}
+
+.radio-label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.radio-label span {
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+/* チェックボックス */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox-label span {
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.privacy-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.privacy-link:hover {
+  color: var(--primary-dark);
+}
+
+/* フォームアクション */
+.form-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.btn-large {
+  padding: 15px 40px;
+  font-size: 1.05rem;
+}
+
+/* 送信完了メッセージ */
+.form-success {
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  color: var(--bg-white);
+  padding: 60px 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--bg-white);
+  color: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 auto 25px;
+}
+
+.form-success h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.form-success p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* 個人情報保護方針 */
+.privacy-content {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  line-height: 1.8;
+}
+
+.privacy-content h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.privacy-content h4 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin: 30px 0 15px;
+  font-weight: bold;
+}
+
+.privacy-content p {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.privacy-content ul {
+  margin: 15px 0 15px 25px;
+  list-style: disc;
+}
+
+.privacy-content li {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* サイドバー */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar-widget {
+  background: var(--bg-white);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.widget-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.faq-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.faq-links a {
+  padding: 12px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-color);
+  transition: var(--transition-fast);
+}
+
+.faq-links a:hover {
+  background: var(--gray-200);
+  color: var(--primary-color);
+  padding-left: 18px;
+}
+
+.widget-link {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: var(--primary-color);
+  color: var(--bg-white);
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.widget-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.widget-text {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* FAQページ */
+.faq-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  justify-content: center;
+}
+
+.faq-tab {
+  padding: 12px 24px;
+  border-radius: 25px;
+  background: var(--gray-100);
+  color: var(--text-color);
+  font-weight: 600;
+  transition: var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.faq-tab:hover {
+  background: var(--primary-light);
+  color: var(--bg-white);
+}
+
+.faq-tab.active {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.faq-section {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--gray-300);
+  padding: 20px 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-q,
+.faq-a {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.faq-q {
+  background: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.faq-a {
+  background: var(--secondary-color);
+  color: var(--bg-white);
+}
+
+.faq-text {
+  flex: 1;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 1.5;
+  padding-top: 5px;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--gray-200);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: var(--transition-fast);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-top: 20px;
+}
+
+.faq-item.active .faq-icon {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  transform: rotate(45deg);
+}
+
+.faq-answer-text {
+  flex: 1;
+  padding-top: 5px;
+}
+
+.faq-answer-text p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.faq-answer-text a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.faq-answer-text a:hover {
+  color: var(--primary-dark);
+}
+
+/* FAQ CTA */
+.faq-cta {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--bg-white);
+  padding: 60px 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-top: 40px;
+}
+
+.faq-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.faq-cta p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  min-width: 200px;
+}
+
+/* レスポンシブ */
+@media (max-width: 1023px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+
+  .privacy-content {
+    padding: 25px 20px;
+  }
+
+  .faq-section {
+    padding: 25px 20px;
+  }
+
+  .faq-q,
+  .faq-a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .faq-text {
+    font-size: 1rem;
+  }
+
+  .faq-cta {
+    padding: 40px 25px;
+  }
+
+  .faq-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .radio-group {
+    gap: 10px;
+  }
+
+  .radio-label {
+    padding: 10px;
+  }
+}

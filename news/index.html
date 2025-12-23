@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="長野県ハンドボールクラブのニュース一覧。試合結果、チームの活動、イベント情報などを掲載しています。">
+  <meta name="keywords" content="ハンドボール,長野県,ニュース,お知らせ,イベント">
+  <title>ニュース一覧 - 長野県ハンドボールクラブ</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/news.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="../images/logo/Yetiロゴ.jpg" alt="Nagano Yeti">
+        </div>
+        <span>Nagano Yeti</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">トップ</a></li>
+          <li class="nav-item"><a href="../team/index.html" class="nav-link">チーム</a></li>
+          <li class="nav-item"><a href="../schedule/matches.html" class="nav-link">試合・練習</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active">ニュース</a></li>
+          <li class="nav-item"><a href="../contact/index.html" class="nav-link">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="container">
+        <h1>ニュース</h1>
+        <p>チームの最新情報とお知らせ</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="news-layout">
+        <!-- メインコンテンツ -->
+        <div class="news-main">
+          <!-- カテゴリーフィルター -->
+          <div class="category-filter">
+            <button class="filter-btn active" data-category="all">すべて</button>
+            <button class="filter-btn" data-category="match">試合</button>
+            <button class="filter-btn" data-category="team">チーム</button>
+            <button class="filter-btn" data-category="event">イベント</button>
+            <button class="filter-btn" data-category="news">お知らせ</button>
+          </div>
+
+          <!-- ニュース記事一覧 -->
+          <div class="news-articles">
+            <!-- 記事1 -->
+            <article class="news-article" data-category="match">
+              <div class="article-image">
+                <div class="article-placeholder">🏆</div>
+                <span class="article-badge badge-secondary">試合</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.12.15</time>
+                <h2 class="article-title">
+                  <a href="article.html">冬季リーグ第3節 勝利しました！</a>
+                </h2>
+                <p class="article-excerpt">
+                  本日行われた冬季リーグ第3節で、上田イーグルスを32-28で破り勝利を収めました。チーム一丸となった守備が光り、接戦を制することができました。後半の追い上げを凌ぎきった勝利です。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">試合結果</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事2 -->
+            <article class="news-article" data-category="news">
+              <div class="article-image">
+                <div class="article-placeholder">📢</div>
+                <span class="article-badge badge-info">お知らせ</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.12.10</time>
+                <h2 class="article-title">
+                  <a href="article.html">新メンバー募集中！</a>
+                </h2>
+                <p class="article-excerpt">
+                  2026年シーズンに向けて、新メンバーを募集しています。初心者の方も大歓迎です。まずは練習見学にお越しください。ハンドボールを通じて、一緒に楽しい時間を過ごしましょう。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">メンバー募集</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事3 -->
+            <article class="news-article" data-category="event">
+              <div class="article-image">
+                <div class="article-placeholder">🎉</div>
+                <span class="article-badge badge-success">イベント</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.12.05</time>
+                <h2 class="article-title">
+                  <a href="article.html">ハンドボール体験会を開催します</a>
+                </h2>
+                <p class="article-excerpt">
+                  12月23日(土)に初心者向けハンドボール体験会を開催します。お子様から大人まで、どなたでも参加可能です。ハンドボールの楽しさを体験してみませんか？参加費無料、事前予約不要です。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">体験会</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事4 -->
+            <article class="news-article" data-category="team">
+              <div class="article-image">
+                <div class="article-placeholder">👕</div>
+                <span class="article-badge badge-warning">チーム</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.11.28</time>
+                <h2 class="article-title">
+                  <a href="article.html">新ユニフォーム発表</a>
+                </h2>
+                <p class="article-excerpt">
+                  2026年シーズンから着用する新しいユニフォームを発表しました。デザインコンセプトは「信州の空と情熱」。鮮やかなターコイズブルーとマゼンタピンクを基調とした、攻撃的なデザインとなっています。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">ユニフォーム</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事5 -->
+            <article class="news-article" data-category="match">
+              <div class="article-image">
+                <div class="article-placeholder">📊</div>
+                <span class="article-badge badge-secondary">試合</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.11.20</time>
+                <h2 class="article-title">
+                  <a href="article.html">冬季リーグ開幕戦 大勝！</a>
+                </h2>
+                <p class="article-excerpt">
+                  冬季リーグ開幕戦で飯田ライジングと対戦し、38-29で大勝しました。佐藤選手が12得点の活躍を見せ、チーム全体で攻守のバランスが取れた試合展開となりました。幸先の良いスタートを切ることができました。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">試合結果</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事6 -->
+            <article class="news-article" data-category="event">
+              <div class="article-image">
+                <div class="article-placeholder">🏫</div>
+                <span class="article-badge badge-success">イベント</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.11.15</time>
+                <h2 class="article-title">
+                  <a href="article.html">地元小学校でハンドボール教室を開催</a>
+                </h2>
+                <p class="article-excerpt">
+                  長野市立○○小学校でハンドボール教室を開催しました。約50名の小学生が参加し、パスやシュートの基本を楽しく学びました。子どもたちの笑顔あふれる素晴らしい時間となりました。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">地域貢献</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事7 -->
+            <article class="news-article" data-category="team">
+              <div class="article-image">
+                <div class="article-placeholder">⭐</div>
+                <span class="article-badge badge-warning">チーム</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.11.10</time>
+                <h2 class="article-title">
+                  <a href="article.html">新入団選手のお知らせ</a>
+                </h2>
+                <p class="article-excerpt">
+                  この度、2名の新入団選手が加わりました。高橋選手（LW）と渡辺選手（RB）です。両選手とも高校・大学で活躍した経験豊富な選手です。チームのさらなる飛躍に期待が高まります。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">新入団</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事8 -->
+            <article class="news-article" data-category="news">
+              <div class="article-image">
+                <div class="article-placeholder">📅</div>
+                <span class="article-badge badge-info">お知らせ</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.11.05</time>
+                <h2 class="article-title">
+                  <a href="article.html">年末年始の練習スケジュールについて</a>
+                </h2>
+                <p class="article-excerpt">
+                  年末年始の練習スケジュールをお知らせします。12月29日～1月3日は練習をお休みさせていただきます。新年の練習開始は1月4日（土）14:00からを予定しております。皆様、良いお年をお迎えください。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">スケジュール</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事9 -->
+            <article class="news-article" data-category="match">
+              <div class="article-image">
+                <div class="article-placeholder">🔥</div>
+                <span class="article-badge badge-secondary">試合</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.10.28</time>
+                <h2 class="article-title">
+                  <a href="article.html">秋季リーグ最終戦 接戦を引き分け</a>
+                </h2>
+                <p class="article-excerpt">
+                  秋季リーグ最終戦は諏訪スターズとの対戦となり、30-30の引き分けに終わりました。両チーム譲らず、最後まで緊張感のある試合展開でした。秋季リーグ全体では2位という好成績を収めることができました。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">試合結果</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 記事10 -->
+            <article class="news-article" data-category="team">
+              <div class="article-image">
+                <div class="article-placeholder">🎂</div>
+                <span class="article-badge badge-warning">チーム</span>
+              </div>
+              <div class="article-content">
+                <time class="article-date">2025.10.20</time>
+                <h2 class="article-title">
+                  <a href="article.html">創立15周年記念パーティーを開催しました</a>
+                </h2>
+                <p class="article-excerpt">
+                  チーム創立15周年を記念したパーティーを開催しました。OB・OGを含む約100名が参加し、これまでの歩みを振り返りながら楽しい時間を過ごしました。これからも地域に愛されるチームを目指していきます。
+                </p>
+                <div class="article-footer">
+                  <span class="article-category">イベント</span>
+                  <a href="article.html" class="article-link">続きを読む →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- サイドバー -->
+        <aside class="news-sidebar">
+          <!-- カテゴリー -->
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">カテゴリー</h3>
+            <ul class="sidebar-categories">
+              <li><a href="#" data-category="all">すべて <span class="count">(10)</span></a></li>
+              <li><a href="#" data-category="match">試合 <span class="count">(3)</span></a></li>
+              <li><a href="#" data-category="team">チーム <span class="count">(3)</span></a></li>
+              <li><a href="#" data-category="event">イベント <span class="count">(2)</span></a></li>
+              <li><a href="#" data-category="news">お知らせ <span class="count">(2)</span></a></li>
+            </ul>
+          </div>
+
+          <!-- 月別アーカイブ -->
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">月別アーカイブ</h3>
+            <ul class="sidebar-archive">
+              <li><a href="#">2025年12月 <span class="count">(3)</span></a></li>
+              <li><a href="#">2025年11月 <span class="count">(5)</span></a></li>
+              <li><a href="#">2025年10月 <span class="count">(2)</span></a></li>
+            </ul>
+          </div>
+
+          <!-- タグ -->
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">タグ</h3>
+            <div class="sidebar-tags">
+              <a href="#" class="tag">試合結果</a>
+              <a href="#" class="tag">メンバー募集</a>
+              <a href="#" class="tag">体験会</a>
+              <a href="#" class="tag">イベント</a>
+              <a href="#" class="tag">練習</a>
+              <a href="#" class="tag">ユニフォーム</a>
+              <a href="#" class="tag">地域貢献</a>
+            </div>
+          </div>
+
+          <!-- バナー -->
+          <div class="sidebar-section">
+            <div class="sidebar-banner">
+              <h4>新メンバー募集中！</h4>
+              <p>一緒にハンドボールを楽しみませんか？</p>
+              <a href="../contact/index.html" class="banner-btn">詳しく見る</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>長野県ハンドボールクラブ</h3>
+          <p>〒380-0000<br>長野県長野市○○町1-2-3</p>
+          <p>TEL: 026-XXX-XXXX<br>Email: info@nagano-handball.jp</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>サイトマップ</h3>
+          <div class="footer-links">
+            <a href="../index.html">トップ</a>
+            <a href="../team/index.html">チーム</a>
+            <a href="../schedule/matches.html">試合・練習</a>
+            <a href="index.html">ニュース</a>
+            <a href="../contact/index.html">お問い合わせ</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>SNS・お問い合わせ</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+          <div class="footer-links mt-20">
+            <a href="../contact/index.html">お問い合わせフォーム</a>
+            <a href="../sponsors/partnership.html">スポンサー募集</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> 長野県ハンドボールクラブ All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script>
+    // カテゴリーフィルター
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const articles = document.querySelectorAll('.news-article');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.dataset.category;
+
+          // ボタンのアクティブ状態を切り替え
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // 記事のフィルタリング
+          articles.forEach(article => {
+            if (category === 'all' || article.dataset.category === category) {
+              article.style.display = 'flex';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // サイドバーのカテゴリーリンク
+      const sidebarLinks = document.querySelectorAll('.sidebar-categories a');
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const category = link.dataset.category;
+          const targetBtn = document.querySelector(`.filter-btn[data-category="${category}"]`);
+          if (targetBtn) targetBtn.click();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

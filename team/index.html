@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="長野県ハンドボールクラブのチーム紹介ページ。選手一覧、スタッフ情報、チームの規則などを掲載しています。">
+  <meta name="keywords" content="ハンドボール,長野県,チーム,選手,スタッフ">
+  <title>チーム紹介 - 長野県ハンドボールクラブ</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/team.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="../images/logo/Yetiロゴ.jpg" alt="Nagano Yeti">
+        </div>
+        <span>Nagano Yeti</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">トップ</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active">チーム</a></li>
+          <li class="nav-item"><a href="../schedule/matches.html" class="nav-link">試合・練習</a></li>
+          <li class="nav-item"><a href="../news/index.html" class="nav-link">ニュース</a></li>
+          <li class="nav-item"><a href="../contact/index.html" class="nav-link">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="container">
+        <h1>チーム紹介</h1>
+        <p>Nagano Yetiのチーム情報</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- チームの3つの規則 -->
+      <section class="section">
+        <h2 class="section-title">チームの3つの規則</h2>
+        <div class="rules-grid">
+          <div class="rule-card">
+            <div class="rule-number">1</div>
+            <div class="rule-content">
+              <h3 class="rule-title">規則その1</h3>
+              <p class="rule-description">
+                ここには第一の規則の内容が入ります。チームとして大切にしている価値観や行動指針を記載します。
+                例：チームワークを何よりも大切にし、仲間を信じて最後まで戦い抜く
+              </p>
+            </div>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-number">2</div>
+            <div class="rule-content">
+              <h3 class="rule-title">規則その2</h3>
+              <p class="rule-description">
+                ここには第二の規則の内容が入ります。日々の練習や試合で心がけるべき姿勢について記載します。
+                例：常に向上心を持ち、自分自身と仲間の成長のために努力を惜しまない
+              </p>
+            </div>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-number">3</div>
+            <div class="rule-content">
+              <h3 class="rule-title">規則その3</h3>
+              <p class="rule-description">
+                ここには第三の規則の内容が入ります。スポーツマンシップやチームの社会的責任について記載します。
+                例：スポーツマンシップを忘れず、地域に愛されるチームを目指す
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- チーム概要 -->
+      <section class="section">
+        <h2 class="section-title">チーム概要</h2>
+        <div class="team-overview">
+          <div class="overview-grid">
+            <div class="overview-item">
+              <div class="overview-label">チーム名</div>
+              <div class="overview-value">Nagano Yeti</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">設立年</div>
+              <div class="overview-value">2010年</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">所属リーグ</div>
+              <div class="overview-value">長野県社会人ハンドボールリーグ</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">ホームアリーナ</div>
+              <div class="overview-value">長野市総合体育館</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">チームカラー</div>
+              <div class="overview-value">シアンブルー × マゼンタ</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">部員数</div>
+              <div class="overview-value">18名</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 選手紹介 -->
+      <section class="section">
+        <h2 class="section-title">選手紹介</h2>
+
+        <!-- ポジション別タブメニュー -->
+        <div class="position-tabs">
+          <button class="position-tab active" data-position="all">全て</button>
+          <button class="position-tab" data-position="GK">GK</button>
+          <button class="position-tab" data-position="LW">LW</button>
+          <button class="position-tab" data-position="LB">LB</button>
+          <button class="position-tab" data-position="CB">CB</button>
+          <button class="position-tab" data-position="RB">RB</button>
+          <button class="position-tab" data-position="RW">RW</button>
+          <button class="position-tab" data-position="PV">PV</button>
+        </div>
+
+        <!-- 選手カード -->
+        <div class="players-grid">
+          <!-- GK -->
+          <div class="player-card-full" data-position="GK">
+            <div class="player-image-full">
+              <div class="player-number-full">1</div>
+              <div class="player-position-badge">GK</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">鈴木 誠</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">1</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">GK</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">188cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">82kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">上田市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-card-full" data-position="GK">
+            <div class="player-image-full">
+              <div class="player-number-full">16</div>
+              <div class="player-position-badge">GK</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">中村 隆史</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">16</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">GK</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">185cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">79kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">長野市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LW -->
+          <div class="player-card-full" data-position="LW">
+            <div class="player-image-full">
+              <div class="player-number-full">3</div>
+              <div class="player-position-badge">LW</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">高橋 翔太</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">3</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">LW</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">178cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">73kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">松本市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-card-full" data-position="LW">
+            <div class="player-image-full">
+              <div class="player-number-full">11</div>
+              <div class="player-position-badge">LW</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">渡辺 健</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">11</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">LW</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">180cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">75kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">飯田市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LB -->
+          <div class="player-card-full" data-position="LB">
+            <div class="player-image-full">
+              <div class="player-number-full">5</div>
+              <div class="player-position-badge">LB</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">小林 勇気</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">5</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">LB</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">183cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">78kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">佐久市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-card-full" data-position="LB">
+            <div class="player-image-full">
+              <div class="player-number-full">13</div>
+              <div class="player-position-badge">LB</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">松本 大輔</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">13</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">LB</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">181cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">76kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">長野市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CB -->
+          <div class="player-card-full" data-position="CB">
+            <div class="player-image-full">
+              <div class="player-number-full">12</div>
+              <div class="player-position-badge">CB</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">佐藤 健太</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">12</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">CB</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">190cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">85kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">松本市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-card-full" data-position="CB">
+            <div class="player-image-full">
+              <div class="player-number-full">14</div>
+              <div class="player-position-badge">CB</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">井上 拓也</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">14</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">CB</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">187cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">83kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">上田市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RB -->
+          <div class="player-card-full" data-position="RB">
+            <div class="player-image-full">
+              <div class="player-number-full">6</div>
+              <div class="player-position-badge">RB</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">木村 拓哉</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">6</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">RB</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">184cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">80kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">諏訪市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-card-full" data-position="RB">
+            <div class="player-image-full">
+              <div class="player-number-full">15</div>
+              <div class="player-position-badge">RB</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">山本 亮</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">15</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">RB</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">182cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">77kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">長野市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RW -->
+          <div class="player-card-full" data-position="RW">
+            <div class="player-image-full">
+              <div class="player-number-full">7</div>
+              <div class="player-position-badge">RW</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">山田 太郎</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">7</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">RW</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">185cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">77kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">長野市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-card-full" data-position="RW">
+            <div class="player-image-full">
+              <div class="player-number-full">9</div>
+              <div class="player-position-badge">RW</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">田中 浩二</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">9</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">RW</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">179cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">74kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">飯山市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PV -->
+          <div class="player-card-full" data-position="PV">
+            <div class="player-image-full">
+              <div class="player-number-full">10</div>
+              <div class="player-position-badge">PV</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">伊藤 翼</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">10</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">PV</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">192cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">88kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">松本市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-card-full" data-position="PV">
+            <div class="player-image-full">
+              <div class="player-number-full">18</div>
+              <div class="player-position-badge">PV</div>
+            </div>
+            <div class="player-info-full">
+              <h3 class="player-name-full">加藤 龍也</h3>
+              <div class="player-details">
+                <div class="detail-item">
+                  <span class="detail-label">背番号</span>
+                  <span class="detail-value">18</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">ポジション</span>
+                  <span class="detail-value">PV</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">身長</span>
+                  <span class="detail-value">189cm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">体重</span>
+                  <span class="detail-value">84kg</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">出身地</span>
+                  <span class="detail-value">上田市</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- スタッフ紹介 -->
+      <section class="section">
+        <h2 class="section-title">スタッフ紹介</h2>
+        <div class="staff-grid">
+          <div class="staff-card">
+            <div class="staff-image">
+              <div class="staff-icon">👤</div>
+            </div>
+            <div class="staff-info">
+              <h3 class="staff-name">中島 健一</h3>
+              <p class="staff-role">監督</p>
+              <p class="staff-description">
+                20年以上のハンドボール経験を持つ。2015年よりチーム監督として指揮を執る。
+                チームワークと基礎を重視した指導で、選手の成長をサポート。
+              </p>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <div class="staff-image">
+              <div class="staff-icon">👤</div>
+            </div>
+            <div class="staff-info">
+              <h3 class="staff-name">原田 博之</h3>
+              <p class="staff-role">コーチ</p>
+              <p class="staff-description">
+                元日本代表選手。オフェンス戦術のスペシャリストとして、攻撃陣の育成を担当。
+                選手一人ひとりの個性を活かした指導を心がけている。
+              </p>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <div class="staff-image">
+              <div class="staff-icon">👤</div>
+            </div>
+            <div class="staff-info">
+              <h3 class="staff-name">斎藤 美咲</h3>
+              <p class="staff-role">トレーナー</p>
+              <p class="staff-description">
+                スポーツトレーナーとして10年の経験を持つ。選手のコンディション管理や
+                怪我の予防・ケアを担当。科学的なアプローチで選手をサポート。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- チーム参加へのCTA -->
+      <section class="section" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); border-radius: var(--border-radius); padding: 60px 40px; text-align: center; color: var(--bg-white);">
+        <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--bg-white);">一緒にプレーしませんか？</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.95;">Nagano Yetiでは新メンバーを募集しています。初心者の方も大歓迎です！</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <a href="../schedule/practice.html" class="btn" style="background: var(--bg-white); color: var(--primary-color);">練習カレンダーを見る</a>
+          <a href="../contact/index.html" class="btn" style="background: transparent; border: 2px solid var(--bg-white); color: var(--bg-white);">お問い合わせ</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Nagano Yeti</h3>
+          <p>〒380-0000<br>長野県長野市○○町1-2-3</p>
+          <p>TEL: 026-XXX-XXXX<br>Email: info@nagano-handball.jp</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>サイトマップ</h3>
+          <div class="footer-links">
+            <a href="../index.html">トップ</a>
+            <a href="index.html">チーム</a>
+            <a href="../schedule/matches.html">試合・練習</a>
+            <a href="../news/index.html">ニュース</a>
+            <a href="../contact/index.html">お問い合わせ</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>SNS・お問い合わせ</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+          <div class="footer-links mt-20">
+            <a href="../contact/index.html">お問い合わせフォーム</a>
+            <a href="../sponsors/partnership.html">スポンサー募集</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Nagano Yeti All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script>
+    // ポジション別タブ切り替え
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.position-tab');
+      const playerCards = document.querySelectorAll('.player-card-full');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const position = tab.dataset.position;
+
+          // アクティブタブの切り替え
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          // 選手カードのフィルタリング
+          playerCards.forEach(card => {
+            if (position === 'all' || card.dataset.position === position) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="長野県ハンドボールクラブへのお問い合わせフォーム。練習見学、入部希望、その他お問い合わせはこちらから。">
+  <meta name="keywords" content="ハンドボール,長野県,お問い合わせ,入部,見学">
+  <title>お問い合わせ - 長野県ハンドボールクラブ</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="../images/logo/Yetiロゴ.jpg" alt="Nagano Yeti">
+        </div>
+        <span>Nagano Yeti</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">トップ</a></li>
+          <li class="nav-item"><a href="../team/index.html" class="nav-link">チーム</a></li>
+          <li class="nav-item"><a href="../schedule/matches.html" class="nav-link">試合・練習</a></li>
+          <li class="nav-item"><a href="../news/index.html" class="nav-link">ニュース</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- ページタイトル -->
+    <div class="page-title">
+      <div class="container">
+        <h1>お問い合わせ</h1>
+        <p>練習見学、入部希望、その他お問い合わせはこちらから</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contact-layout">
+        <!-- メインコンテンツ -->
+        <div class="contact-main">
+          <!-- お問い合わせフォーム -->
+          <section class="section">
+            <h2 class="section-title">お問い合わせフォーム</h2>
+
+            <div class="form-intro">
+              <p>
+                ご質問やご相談など、お気軽にお問い合わせください。<br>
+                内容を確認次第、担当者より3営業日以内にご連絡いたします。
+              </p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <!-- お問い合わせ種別 -->
+              <div class="form-group">
+                <label for="category" class="form-label required">お問い合わせ種別</label>
+                <select id="category" name="category" class="form-control" required>
+                  <option value="">選択してください</option>
+                  <option value="join">入部希望</option>
+                  <option value="trial">練習見学・体験参加</option>
+                  <option value="match">試合観戦について</option>
+                  <option value="sponsor">スポンサー・協賛について</option>
+                  <option value="other">その他</option>
+                </select>
+                <span class="error-message" id="categoryError"></span>
+              </div>
+
+              <!-- お名前 -->
+              <div class="form-group">
+                <label for="name" class="form-label required">お名前</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="山田 太郎" required>
+                <span class="error-message" id="nameError"></span>
+              </div>
+
+              <!-- フリガナ -->
+              <div class="form-group">
+                <label for="furigana" class="form-label">フリガナ</label>
+                <input type="text" id="furigana" name="furigana" class="form-control" placeholder="ヤマダ タロウ">
+              </div>
+
+              <!-- メールアドレス -->
+              <div class="form-group">
+                <label for="email" class="form-label required">メールアドレス</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="example@email.com" required>
+                <span class="error-message" id="emailError"></span>
+              </div>
+
+              <!-- 電話番号 -->
+              <div class="form-group">
+                <label for="phone" class="form-label">電話番号</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="090-1234-5678">
+                <small class="form-hint">ハイフン（-）を含めてご入力ください</small>
+              </div>
+
+              <!-- 年齢 -->
+              <div class="form-group">
+                <label for="age" class="form-label">年齢</label>
+                <input type="number" id="age" name="age" class="form-control" placeholder="25" min="0" max="99">
+              </div>
+
+              <!-- ハンドボール経験 -->
+              <div class="form-group">
+                <label class="form-label">ハンドボール経験</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="experience" value="none" checked>
+                    <span>未経験</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="experience" value="beginner">
+                    <span>初心者（1年未満）</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="experience" value="intermediate">
+                    <span>経験者（1年以上）</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="experience" value="advanced">
+                    <span>上級者</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- お問い合わせ内容 -->
+              <div class="form-group">
+                <label for="message" class="form-label required">お問い合わせ内容</label>
+                <textarea id="message" name="message" class="form-control" rows="8" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+                <span class="error-message" id="messageError"></span>
+              </div>
+
+              <!-- 個人情報の取り扱い -->
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="privacy" name="privacy" required>
+                  <span><a href="#privacy-policy" class="privacy-link">個人情報保護方針</a>に同意する</span>
+                </label>
+                <span class="error-message" id="privacyError"></span>
+              </div>
+
+              <!-- 送信ボタン -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-large">送信する</button>
+                <button type="reset" class="btn btn-outline btn-large">リセット</button>
+              </div>
+            </form>
+
+            <!-- 送信完了メッセージ（初期は非表示） -->
+            <div class="form-success" id="formSuccess" style="display: none;">
+              <div class="success-icon">✓</div>
+              <h3>送信完了</h3>
+              <p>お問い合わせありがとうございます。<br>3営業日以内に担当者よりご連絡いたします。</p>
+            </div>
+          </section>
+
+          <!-- 個人情報保護方針 -->
+          <section class="section" id="privacy-policy">
+            <h2 class="section-title">個人情報保護方針</h2>
+            <div class="privacy-content">
+              <h3>個人情報の取り扱いについて</h3>
+              <p>
+                長野県ハンドボールクラブ（以下「当クラブ」）は、お客様からご提供いただいた個人情報を以下の方針に基づき適切に取り扱います。
+              </p>
+
+              <h4>1. 個人情報の利用目的</h4>
+              <ul>
+                <li>お問い合わせへの回答</li>
+                <li>練習見学・体験参加のご案内</li>
+                <li>入部手続きに関する連絡</li>
+                <li>当クラブの活動に関する情報提供</li>
+              </ul>
+
+              <h4>2. 個人情報の第三者提供</h4>
+              <p>
+                当クラブは、法令に基づく場合を除き、お客様の同意なく個人情報を第三者に提供することはありません。
+              </p>
+
+              <h4>3. 個人情報の管理</h4>
+              <p>
+                当クラブは、個人情報への不正アクセス、紛失、破壊、改ざん、漏洩などを防ぐため、適切な安全管理措置を講じます。
+              </p>
+
+              <h4>4. お問い合わせ窓口</h4>
+              <p>
+                個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。<br>
+                Email: privacy@nagano-handball.jp
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- サイドバー -->
+        <aside class="contact-sidebar">
+          <!-- 連絡先情報 -->
+          <div class="sidebar-widget">
+            <h3 class="widget-title">連絡先情報</h3>
+            <div class="contact-info">
+              <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-text">
+                  <div class="info-label">住所</div>
+                  <div class="info-value">〒380-0000<br>長野県長野市○○町1-2-3</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">📞</div>
+                <div class="info-text">
+                  <div class="info-label">電話</div>
+                  <div class="info-value">026-XXX-XXXX</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">✉️</div>
+                <div class="info-text">
+                  <div class="info-label">メール</div>
+                  <div class="info-value">info@nagano-handball.jp</div>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">⏰</div>
+                <div class="info-text">
+                  <div class="info-label">受付時間</div>
+                  <div class="info-value">平日 10:00-18:00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- よくある質問 -->
+          <div class="sidebar-widget">
+            <h3 class="widget-title">よくある質問</h3>
+            <div class="faq-links">
+              <a href="faq.html">入部について</a>
+              <a href="faq.html">練習について</a>
+              <a href="faq.html">費用について</a>
+              <a href="faq.html">その他</a>
+            </div>
+            <a href="faq.html" class="widget-link">FAQ一覧を見る</a>
+          </div>
+
+          <!-- SNS -->
+          <div class="sidebar-widget">
+            <h3 class="widget-title">SNS</h3>
+            <p class="widget-text">SNSでも情報発信中！お気軽にフォローください。</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+              <a href="#" class="social-link" aria-label="Facebook">f</a>
+              <a href="#" class="social-link" aria-label="Instagram">📷</a>
+              <a href="#" class="social-link" aria-label="YouTube">▶</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>長野県ハンドボールクラブ</h3>
+          <p>〒380-0000<br>長野県長野市○○町1-2-3</p>
+          <p>TEL: 026-XXX-XXXX<br>Email: info@nagano-handball.jp</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>サイトマップ</h3>
+          <div class="footer-links">
+            <a href="../index.html">トップ</a>
+            <a href="../team/index.html">チーム</a>
+            <a href="../schedule/matches.html">試合・練習</a>
+            <a href="../news/index.html">ニュース</a>
+            <a href="index.html">お問い合わせ</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>SNS・お問い合わせ</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+          <div class="footer-links mt-20">
+            <a href="index.html">お問い合わせフォーム</a>
+            <a href="../sponsors/partnership.html">スポンサー募集</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> 長野県ハンドボールクラブ All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/form-validation.js"></script>
+</body>
+</html>

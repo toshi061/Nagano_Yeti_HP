@@ -1,0 +1,2156 @@
+/* ==========================================
+   長野県ハンドボールクラブ - 試合・練習ページスタイル
+   ========================================== */
+
+/* ========== サブナビゲーション ========== */
+.sub-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding: 15px;
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sub-nav-link {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+  background: var(--gray-100);
+  transition: var(--transition-fast);
+}
+
+.sub-nav-link:hover {
+  background: var(--primary-light);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
+.sub-nav-link.active {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========== 試合カード ========== */
+.matches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.match-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  border-left: 5px solid var(--primary-color);
+}
+
+.match-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.match-league {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.match-status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bg-white);
+}
+
+.match-status.upcoming {
+  background: var(--primary-color);
+}
+
+.match-main {
+  display: flex;
+  gap: 25px;
+  padding: 30px 25px;
+}
+
+.match-date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+}
+
+.match-month {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.match-day {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.match-weekday {
+  font-size: 0.85rem;
+}
+
+.match-details {
+  flex: 1;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.team.home {
+  justify-content: flex-start;
+}
+
+.team.away {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.team-logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: var(--gray-100);
+  border-radius: 50%;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.match-vs {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-lighter);
+}
+
+.match-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+}
+
+.info-icon {
+  font-size: 1.3rem;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-right: 5px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.match-footer {
+  padding: 15px 25px;
+  background: var(--gray-100);
+  border-top: 1px solid var(--gray-300);
+}
+
+.match-note {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* ========== 試合結果カード ========== */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.result-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.result-card.win {
+  border-left: 5px solid #4CAF50;
+}
+
+.result-card.loss {
+  border-left: 5px solid #F44336;
+}
+
+.result-card.draw {
+  border-left: 5px solid #FF9800;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: var(--gray-100);
+}
+
+.result-league {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.result-status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bg-white);
+}
+
+.result-status.win {
+  background: #4CAF50;
+}
+
+.result-status.loss {
+  background: #F44336;
+}
+
+.result-status.draw {
+  background: #FF9800;
+}
+
+.result-main {
+  padding: 30px 25px;
+}
+
+.result-date {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result-date-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.result-venue {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.result-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.team-result {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.team-result.home {
+  flex-direction: row;
+}
+
+.team-result.away {
+  flex-direction: row-reverse;
+}
+
+.team-name-result {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.team-score {
+  font-size: 3rem;
+  font-weight: bold;
+  min-width: 80px;
+  text-align: center;
+  padding: 15px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+}
+
+.team-result.win .team-score {
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  color: var(--bg-white);
+}
+
+.team-result.loss .team-score {
+  background: var(--gray-200);
+  color: var(--text-light);
+}
+
+.team-result.draw .team-score {
+  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%);
+  color: var(--bg-white);
+}
+
+.score-separator {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-lighter);
+}
+
+.result-footer {
+  padding: 25px;
+  background: var(--gray-100);
+}
+
+.result-summary {
+  margin-bottom: 15px;
+}
+
+.result-summary p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.result-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--bg-white);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+}
+
+.stat-label {
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.stat-value {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* ========== シーズン成績 ========== */
+.season-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-number.win {
+  color: #4CAF50;
+}
+
+.stat-number.loss {
+  color: #F44336;
+}
+
+.stat-number.draw {
+  color: #FF9800;
+}
+
+.stat-number.primary {
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* ========== 観戦案内カード ========== */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.info-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.info-card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.info-card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.info-card-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+/* ========== 練習スケジュールグリッド ========== */
+.practice-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.practice-schedule-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.practice-schedule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.practice-day-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 25px;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
+  color: var(--bg-white);
+}
+
+.practice-day-icon {
+  font-size: 2.5rem;
+}
+
+.practice-day-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.practice-schedule-details {
+  padding: 25px;
+}
+
+.practice-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.practice-detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.detail-content {
+  flex: 1;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 3px;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.practice-note {
+  padding: 20px 25px;
+  background: var(--gray-100);
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ========== 月間カレンダー ========== */
+.monthly-practice {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.month-header {
+  padding: 25px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  text-align: center;
+}
+
+.month-header h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.practice-calendar {
+  padding: 25px;
+}
+
+.calendar-item {
+  display: grid;
+  grid-template-columns: 120px 100px 1fr 150px;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 12px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-fast);
+}
+
+.calendar-item:hover {
+  background: var(--gray-200);
+  transform: translateX(5px);
+}
+
+.calendar-item.special {
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.1) 0%, rgba(240, 98, 146, 0.1) 100%);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.calendar-date {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.05rem;
+}
+
+.calendar-time {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.calendar-venue {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.calendar-type {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+/* ========== 体験参加セクション ========== */
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.experience-intro {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.experience-flow {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.flow-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.flow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 25px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.step-content h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.experience-info {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.info-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.info-item-card {
+  padding: 25px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.info-item-card:hover {
+  background: var(--primary-light);
+  color: var(--bg-white);
+  transform: translateY(-3px);
+}
+
+.info-item-card:hover .info-name,
+.info-item-card:hover .info-desc {
+  color: var(--bg-white);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.info-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.info-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.experience-qa {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.qa-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qa-item {
+  padding: 20px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+  border-left: 4px solid var(--primary-color);
+}
+
+.qa-question {
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.qa-answer {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.experience-cta {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+  color: var(--bg-white);
+  border-radius: var(--border-radius);
+}
+
+.experience-cta p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* ========== 会場案内 ========== */
+.venue-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.venue-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.venue-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.venue-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+}
+
+.venue-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.venue-text {
+  flex: 1;
+}
+
+.venue-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.venue-value {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ========== 順位表 ========== */
+.standings-container {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.standings-table-wrapper {
+  overflow-x: auto;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.standings-table thead {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+}
+
+.standings-table th {
+  padding: 15px 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.standings-table td {
+  padding: 18px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-200);
+  font-size: 0.95rem;
+}
+
+.standings-table tbody tr {
+  transition: var(--transition-fast);
+}
+
+.standings-table tbody tr:hover {
+  background: var(--gray-100);
+}
+
+.standings-table .our-team {
+  background: rgba(0, 188, 212, 0.08);
+  font-weight: 600;
+}
+
+.standings-table .our-team:hover {
+  background: rgba(0, 188, 212, 0.15);
+}
+
+.standings-table .rank-col {
+  width: 60px;
+}
+
+.standings-table .team-col {
+  text-align: left;
+  min-width: 200px;
+}
+
+.standings-table .stat-col {
+  width: 70px;
+}
+
+.standings-table .points-col {
+  width: 80px;
+  font-weight: bold;
+}
+
+.standings-table .rank {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.standings-table .team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.standings-table .team-icon {
+  font-size: 1.3rem;
+}
+
+.standings-table .team-name {
+  font-weight: 600;
+}
+
+.standings-table .win {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.standings-table .loss {
+  color: #F44336;
+}
+
+.standings-table .positive {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.standings-table .negative {
+  color: #F44336;
+}
+
+.standings-table .points {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.standings-note {
+  padding: 20px 25px;
+  background: var(--gray-100);
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.standings-note p {
+  margin-bottom: 5px;
+}
+
+.standings-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== チーム詳細成績 ========== */
+.team-detail-stats {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.detail-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.detail-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+  transition: var(--transition-normal);
+}
+
+.detail-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-stat-card .stat-icon {
+  font-size: 2.5rem;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-info .stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.stat-info .stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.stat-info .stat-value.primary {
+  color: var(--primary-color);
+}
+
+.stat-info .stat-value.secondary {
+  color: var(--secondary-color);
+}
+
+.stat-info .stat-value.accent {
+  color: var(--accent-color);
+}
+
+.stat-info .stat-sub {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* ========== 個人ランキング ========== */
+.rankings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.ranking-section {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.ranking-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-fast);
+}
+
+.ranking-item:hover {
+  background: var(--gray-200);
+  transform: translateX(3px);
+}
+
+.ranking-item.rank-1 {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+}
+
+.ranking-item.rank-2 {
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.2) 0%, rgba(192, 192, 192, 0.1) 100%);
+}
+
+.ranking-item.rank-3 {
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.2) 0%, rgba(205, 127, 50, 0.1) 100%);
+}
+
+.ranking-pos {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  color: var(--bg-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ranking-item.rank-1 .ranking-pos {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+}
+
+.ranking-item.rank-2 .ranking-pos {
+  background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+}
+
+.ranking-item.rank-3 .ranking-pos {
+  background: linear-gradient(135deg, #CD7F32 0%, #B87333 100%);
+}
+
+.ranking-player {
+  flex: 1;
+}
+
+.ranking-player .player-name {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+
+.ranking-player .player-position {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.ranking-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* ========== リーグ情報カード ========== */
+.league-info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.league-info-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.league-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.league-info-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.league-info-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+/* ========== 大会カードグリッド ========== */
+.tournament-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.tournament-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.tournament-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.tournament-card.champion {
+  border-color: #FFD700;
+}
+
+.tournament-card.champion::before {
+  content: '🏆';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  animation: trophy-bounce 2s ease-in-out infinite;
+}
+
+@keyframes trophy-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.tournament-card-header {
+  padding: 30px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  text-align: center;
+}
+
+.tournament-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.tournament-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tournament-card-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.tournament-date {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.tournament-result {
+  margin-bottom: 20px;
+}
+
+.result-rank {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.tournament-result.rank-1 .result-rank {
+  color: #FFD700;
+}
+
+.tournament-result.rank-2 .result-rank {
+  color: #C0C0C0;
+}
+
+.tournament-result.rank-3 .result-rank {
+  color: #CD7F32;
+}
+
+.result-detail {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.tournament-record {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.record-wins {
+  color: #4CAF50;
+}
+
+.record-losses {
+  color: #F44336;
+}
+
+.record-draws {
+  color: #FF9800;
+}
+
+.record-separator {
+  color: var(--text-lighter);
+}
+
+.tournament-card-footer {
+  padding: 20px 30px;
+  background: var(--gray-100);
+  text-align: center;
+  border-top: 1px solid var(--gray-300);
+}
+
+.view-detail-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* ========== モーダル ========== */
+.tournament-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tournament-modal.active {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  max-width: 1200px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: var(--secondary-color);
+  color: var(--bg-white);
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  padding: 40px 40px 30px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  text-align: center;
+}
+
+.modal-tournament-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.modal-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 40px;
+}
+
+.tournament-standings {
+  margin-bottom: 40px;
+}
+
+.standings-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.results-section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.tournament-summary {
+  margin-top: 40px;
+  padding: 30px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+}
+
+.tournament-summary h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-white);
+  border-radius: var(--border-radius-sm);
+}
+
+.summary-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.summary-value.rank-1 {
+  color: #FFD700;
+}
+
+.summary-value.rank-2 {
+  color: #C0C0C0;
+}
+
+.summary-value.rank-3 {
+  color: #CD7F32;
+}
+
+.team-highlight {
+  background: rgba(0, 188, 212, 0.08);
+  font-weight: 600;
+}
+
+.team-highlight:hover {
+  background: rgba(0, 188, 212, 0.15) !important;
+}
+
+.rank-1 {
+  color: #FFD700;
+}
+
+.rank-2 {
+  color: #C0C0C0;
+}
+
+.rank-3 {
+  color: #CD7F32;
+}
+
+.win-count {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.loss-count {
+  color: #F44336;
+}
+
+/* ========== カレンダー ========== */
+.calendar-container {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 30px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.calendar-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.calendar-nav-btn {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--primary-color);
+  background: var(--bg-white);
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-nav-btn:hover {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  transform: scale(1.1);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: bold;
+  color: var(--text-color);
+  padding: 12px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.95rem;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  padding: 10px;
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-white);
+  border: 2px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: var(--transition-fast);
+  min-height: 80px;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+}
+
+.calendar-day:not(.empty):hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.calendar-day.today {
+  border-color: var(--primary-color);
+  border-width: 3px;
+  background: rgba(0, 188, 212, 0.05);
+}
+
+.day-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.calendar-day.today .day-number {
+  color: var(--primary-color);
+}
+
+.day-marker {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: var(--bg-white);
+  font-weight: 600;
+  margin-top: 3px;
+  text-align: center;
+}
+
+.day-marker.practice {
+  background: var(--primary-color);
+}
+
+.day-marker.match {
+  background: var(--secondary-color);
+}
+
+.day-marker.event {
+  background: var(--accent-color);
+}
+
+.calendar-legend {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 20px;
+}
+
+.legend-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.legend-items {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-color.practice {
+  background: var(--primary-color);
+}
+
+.legend-color.match {
+  background: var(--secondary-color);
+}
+
+.legend-color.event {
+  background: var(--accent-color);
+}
+
+.legend-label {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* ========== 練習リスト ========== */
+.practice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.practice-item {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  transition: var(--transition-normal);
+  border-left: 5px solid var(--primary-color);
+}
+
+.practice-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.practice-date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+}
+
+.practice-month {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.practice-day {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.practice-weekday {
+  font-size: 0.8rem;
+}
+
+.practice-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.practice-time,
+.practice-venue {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.practice-note {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 5px;
+}
+
+/* ========== 練習情報カード ========== */
+.practice-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.practice-info-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.practice-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.practice-info-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.practice-info-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.practice-info-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+/* ========== アニメーション ========== */
+@keyframes highlight {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(0, 188, 212, 0.1);
+  }
+}
+
+/* ========== レスポンシブ対応 ========== */
+
+/* タブレット */
+@media (max-width: 1023px) {
+  .match-teams {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .team {
+    justify-content: center !important;
+    flex-direction: row !important;
+  }
+
+  .match-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .calendar-type {
+    text-align: left;
+  }
+
+  .flow-steps {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .tournament-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .modal-content {
+    max-height: 85vh;
+  }
+
+  .modal-header {
+    padding: 30px 25px 25px;
+  }
+
+  .modal-body {
+    padding: 30px 25px;
+  }
+
+  .calendar-container {
+    padding: 20px;
+  }
+
+  .calendar-title {
+    font-size: 1.5rem;
+  }
+
+  .practice-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* モバイル */
+@media (max-width: 767px) {
+  .sub-nav {
+    gap: 8px;
+  }
+
+  .sub-nav-link {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .match-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .match-date-block {
+    width: 100%;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .result-score {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-result {
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .team-score {
+    font-size: 2.5rem;
+    min-width: 60px;
+    padding: 10px;
+  }
+
+  .practice-schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .standings-table {
+    font-size: 0.85rem;
+  }
+
+  .standings-table th,
+  .standings-table td {
+    padding: 10px 6px;
+  }
+
+  .detail-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rankings-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tournament-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tournament-card-header {
+    padding: 25px 20px;
+  }
+
+  .tournament-icon {
+    font-size: 3rem;
+  }
+
+  .tournament-card-title {
+    font-size: 1.2rem;
+  }
+
+  .tournament-card-body {
+    padding: 25px 20px;
+  }
+
+  .tournament-modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+
+  .modal-header {
+    padding: 25px 20px 20px;
+  }
+
+  .modal-tournament-icon {
+    font-size: 3rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-subtitle {
+    font-size: 1rem;
+  }
+
+  .modal-body {
+    padding: 25px 20px;
+  }
+
+  .standings-title,
+  .results-section-title {
+    font-size: 1.3rem;
+  }
+
+  .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-value {
+    font-size: 1.5rem;
+  }
+
+  .calendar-container {
+    padding: 15px;
+  }
+
+  .calendar-header {
+    margin-bottom: 20px;
+  }
+
+  .calendar-title {
+    font-size: 1.2rem;
+  }
+
+  .calendar-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .weekday {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .calendar-days {
+    gap: 5px;
+  }
+
+  .calendar-day {
+    min-height: 60px;
+    padding: 5px;
+  }
+
+  .day-number {
+    font-size: 1rem;
+  }
+
+  .day-marker {
+    font-size: 0.65rem;
+    padding: 2px 5px;
+  }
+
+  .calendar-legend {
+    padding: 15px;
+  }
+
+  .legend-items {
+    gap: 15px;
+  }
+
+  .practice-item {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .practice-date-block {
+    width: 100%;
+  }
+
+  .practice-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

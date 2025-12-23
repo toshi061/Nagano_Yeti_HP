@@ -1,0 +1,787 @@
+/* ==========================================
+   長野県ハンドボールクラブ - スポンサーページスタイル
+   ========================================== */
+
+/* 感謝のメッセージ */
+.thanks-message {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--bg-white);
+  padding: 50px 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.thanks-message h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.thanks-message p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* スポンサーティア */
+.sponsor-tier {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.sponsor-tier.gold {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #8B4513;
+}
+
+.sponsor-tier.silver {
+  background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+  color: #4A4A4A;
+}
+
+.sponsor-tier.bronze {
+  background: linear-gradient(135deg, #CD7F32 0%, #B87333 100%);
+  color: var(--bg-white);
+}
+
+/* スポンサーグリッド */
+.sponsors-grid {
+  display: grid;
+  gap: 30px;
+}
+
+.gold-grid {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.silver-grid {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.bronze-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* スポンサーカード */
+.sponsor-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sponsor-card.gold {
+  border-top: 5px solid #FFD700;
+}
+
+.sponsor-card.silver {
+  border-top: 5px solid #C0C0C0;
+}
+
+.sponsor-card.bronze {
+  border-top: 5px solid #CD7F32;
+}
+
+.sponsor-logo {
+  height: 200px;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-logo.small {
+  height: 150px;
+}
+
+.logo-placeholder {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-lighter);
+  padding: 20px;
+  border: 3px dashed var(--gray-300);
+  border-radius: var(--border-radius-sm);
+}
+
+.sponsor-info {
+  padding: 25px;
+}
+
+.sponsor-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.sponsor-category {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  padding: 4px 12px;
+  background: var(--gray-100);
+  display: inline-block;
+  border-radius: 12px;
+}
+
+.sponsor-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.sponsor-website {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.sponsor-website:hover {
+  color: var(--secondary-color);
+}
+
+/* スポンサーメリット */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: var(--bg-white);
+  padding: 35px 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.benefit-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.benefit-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-list li {
+  padding: 8px 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* スポンサーCTA */
+.sponsor-cta {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
+  color: var(--bg-white);
+  padding: 60px 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.sponsor-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.sponsor-cta p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ロゴウォール */
+.logo-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box {
+  width: 120px;
+  height: 80px;
+  background: var(--bg-white);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--text-lighter);
+  transition: var(--transition-fast);
+}
+
+.logo-box:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.logo-name {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* 協賛案内ページ */
+
+/* ご挨拶 */
+.greeting-section {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border-left: 5px solid var(--primary-color);
+}
+
+.greeting-section h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.greeting-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/* 協賛プラン */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.plan-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.plan-header {
+  padding: 35px 30px;
+  text-align: center;
+  color: var(--bg-white);
+}
+
+.plan-header.gold {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+}
+
+.plan-header.silver {
+  background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+}
+
+.plan-header.bronze {
+  background: linear-gradient(135deg, #CD7F32 0%, #B87333 100%);
+}
+
+.plan-tier {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+}
+
+.price-amount {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.price-unit {
+  font-size: 1.2rem;
+}
+
+.plan-body {
+  padding: 35px 30px;
+  flex: 1;
+}
+
+.plan-subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-features li {
+  padding: 12px 0;
+  color: var(--text-color);
+  line-height: 1.6;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.plan-footer {
+  padding: 25px 30px;
+  background: var(--gray-100);
+}
+
+.plan-note {
+  background: var(--gray-100);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin-top: 30px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.plan-note p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.plan-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* メリットグリッド */
+.merit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.merit-card {
+  background: var(--bg-white);
+  padding: 35px 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.merit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.merit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.merit-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.merit-description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* 使い道 */
+.usage-section {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.usage-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.usage-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.usage-item {
+  display: flex;
+}
+
+.usage-bar {
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  padding: 15px 20px;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-fast);
+}
+
+.usage-bar:hover {
+  transform: translateX(5px);
+}
+
+.usage-label {
+  font-weight: 600;
+}
+
+.usage-percentage {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* 実績 */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.achievement-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition-normal);
+  border-top: 4px solid var(--primary-color);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.achievement-year {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.achievement-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.achievement-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* お申し込みの流れ */
+.flow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.flow-step-item {
+  background: var(--bg-white);
+  padding: 30px 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  transition: var(--transition-normal);
+}
+
+.flow-step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.flow-arrow {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* パートナーシップCTA */
+.partnership-cta {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--bg-white);
+  padding: 60px 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.partnership-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.partnership-cta p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.cta-info {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+}
+
+.cta-contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-icon {
+  font-size: 2rem;
+}
+
+.contact-detail {
+  text-align: left;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* レスポンシブ */
+@media (max-width: 1023px) {
+  .gold-grid,
+  .silver-grid,
+  .bronze-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .thanks-message {
+    padding: 35px 25px;
+  }
+
+  .thanks-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .thanks-message p {
+    font-size: 1rem;
+  }
+
+  .gold-grid,
+  .silver-grid,
+  .bronze-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-cta {
+    padding: 40px 25px;
+  }
+
+  .sponsor-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .logo-wall {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .greeting-section {
+    padding: 25px 20px;
+  }
+
+  .greeting-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .greeting-text {
+    font-size: 1rem;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-header {
+    padding: 30px 25px;
+  }
+
+  .plan-name {
+    font-size: 1.5rem;
+  }
+
+  .price-amount {
+    font-size: 2.5rem;
+  }
+
+  .merit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .usage-bar {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-steps {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .partnership-cta {
+    padding: 40px 25px;
+  }
+
+  .partnership-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-contact {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
