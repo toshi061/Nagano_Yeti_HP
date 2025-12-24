@@ -65,33 +65,7 @@
           <span class="sponsor-tier gold">🥇 ゴールドスポンサー</span>
         </h2>
         <div class="sponsors-grid gold-grid">
-          <div class="sponsor-card gold">
-            <div class="sponsor-logo">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">株式会社 長野スポーツ</h3>
-              <p class="sponsor-category">スポーツ用品販売</p>
-              <p class="sponsor-description">
-                スポーツ用品の総合専門店。ハンドボール用品も豊富に取り揃えています。
-              </p>
-              <a href="#" class="sponsor-website">ウェブサイト →</a>
-            </div>
-          </div>
-
-          <div class="sponsor-card gold">
-            <div class="sponsor-logo">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">信州建設株式会社</h3>
-              <p class="sponsor-category">建設業</p>
-              <p class="sponsor-description">
-                長野県を中心に建設事業を展開。地域スポーツの発展を支援しています。
-              </p>
-              <a href="#" class="sponsor-website">ウェブサイト →</a>
-            </div>
-          </div>
+          <!-- データから動的に読み込まれます -->
         </div>
       </section>
 
@@ -101,47 +75,7 @@
           <span class="sponsor-tier silver">🥈 シルバースポンサー</span>
         </h2>
         <div class="sponsors-grid silver-grid">
-          <div class="sponsor-card silver">
-            <div class="sponsor-logo">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">長野第一銀行</h3>
-              <p class="sponsor-category">金融機関</p>
-              <p class="sponsor-description">
-                地域密着型の金融サービスを提供。スポーツ振興に積極的に取り組んでいます。
-              </p>
-              <a href="#" class="sponsor-website">ウェブサイト →</a>
-            </div>
-          </div>
-
-          <div class="sponsor-card silver">
-            <div class="sponsor-logo">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">株式会社 信州食品</h3>
-              <p class="sponsor-category">食品製造・販売</p>
-              <p class="sponsor-description">
-                長野県産の食材を使用した食品製造。健康とスポーツをサポートします。
-              </p>
-              <a href="#" class="sponsor-website">ウェブサイト →</a>
-            </div>
-          </div>
-
-          <div class="sponsor-card silver">
-            <div class="sponsor-logo">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">長野自動車株式会社</h3>
-              <p class="sponsor-category">自動車販売</p>
-              <p class="sponsor-description">
-                新車・中古車の販売からメンテナンスまで。チームの移動をサポートしています。
-              </p>
-              <a href="#" class="sponsor-website">ウェブサイト →</a>
-            </div>
-          </div>
+          <!-- データから動的に読み込まれます -->
         </div>
       </section>
 
@@ -151,65 +85,7 @@
           <span class="sponsor-tier bronze">🥉 ブロンズスポンサー</span>
         </h2>
         <div class="sponsors-grid bronze-grid">
-          <div class="sponsor-card bronze">
-            <div class="sponsor-logo small">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">長野メディカルクリニック</h3>
-              <p class="sponsor-category">医療機関</p>
-            </div>
-          </div>
-
-          <div class="sponsor-card bronze">
-            <div class="sponsor-logo small">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">株式会社 信州印刷</h3>
-              <p class="sponsor-category">印刷業</p>
-            </div>
-          </div>
-
-          <div class="sponsor-card bronze">
-            <div class="sponsor-logo small">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">長野不動産</h3>
-              <p class="sponsor-category">不動産業</p>
-            </div>
-          </div>
-
-          <div class="sponsor-card bronze">
-            <div class="sponsor-logo small">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">信州ホテル</h3>
-              <p class="sponsor-category">宿泊業</p>
-            </div>
-          </div>
-
-          <div class="sponsor-card bronze">
-            <div class="sponsor-logo small">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">長野広告株式会社</h3>
-              <p class="sponsor-category">広告業</p>
-            </div>
-          </div>
-
-          <div class="sponsor-card bronze">
-            <div class="sponsor-logo small">
-              <div class="logo-placeholder">LOGO</div>
-            </div>
-            <div class="sponsor-info">
-              <h3 class="sponsor-name">株式会社 信州IT</h3>
-              <p class="sponsor-category">IT・システム開発</p>
-            </div>
-          </div>
+          <!-- データから動的に読み込まれます -->
         </div>
       </section>
 
@@ -364,5 +240,35 @@
 
   <script src="../js/common.js"></script>
   <script src="../js/navigation.js"></script>
+  <script src="../js/data-loader.js"></script>
+  <script>
+    // ページ読み込み時にスポンサーデータを動的に読み込む
+    document.addEventListener('DOMContentLoaded', async () => {
+      const sponsors = await loadSponsors();
+
+      // tierごとにスポンサーを分類
+      const goldSponsors = sponsors.filter(s => s.tier === 'gold');
+      const silverSponsors = sponsors.filter(s => s.tier === 'silver');
+      const bronzeSponsors = sponsors.filter(s => s.tier === 'bronze');
+
+      // ゴールドスポンサーを表示
+      const goldGrid = document.querySelector('.sponsors-grid.gold-grid');
+      if (goldGrid && goldSponsors.length > 0) {
+        goldGrid.innerHTML = goldSponsors.map(sponsor => createSponsorCardHTML(sponsor)).join('');
+      }
+
+      // シルバースポンサーを表示
+      const silverGrid = document.querySelector('.sponsors-grid.silver-grid');
+      if (silverGrid && silverSponsors.length > 0) {
+        silverGrid.innerHTML = silverSponsors.map(sponsor => createSponsorCardHTML(sponsor)).join('');
+      }
+
+      // ブロンズスポンサーを表示
+      const bronzeGrid = document.querySelector('.sponsors-grid.bronze-grid');
+      if (bronzeGrid && bronzeSponsors.length > 0) {
+        bronzeGrid.innerHTML = bronzeSponsors.map(sponsor => createSponsorCardHTML(sponsor)).join('');
+      }
+    });
+  </script>
 </body>
 </html>

@@ -44,38 +44,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
   const currentPage = currentPath.split('/').pop() || 'index.html';
 
-  navLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
+  // まず既存のactiveクラスを維持（HTMLで既に設定されている場合）
+  const hasActiveLink = Array.from(navLinks).some(link => link.classList.contains('active'));
 
-    // トップページの判定
-    if (currentPage === 'index.html' || currentPage === '') {
-      if (linkPath === '../index.html' || linkPath === 'index.html' || linkPath === '/') {
-        link.classList.add('active');
+  // HTMLでactiveが設定されていない場合のみ、JavaScriptで判定
+  if (!hasActiveLink) {
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+
+      // ルートのindex.htmlの判定（サブディレクトリ内ではない場合のみ）
+      if ((currentPage === 'index.html' || currentPage === '') &&
+          !currentPath.includes('/team/') &&
+          !currentPath.includes('/schedule/') &&
+          !currentPath.includes('/news/') &&
+          !currentPath.includes('/contact/') &&
+          !currentPath.includes('/sponsors/')) {
+        if (linkPath === 'index.html' || linkPath === './' || linkPath === '/') {
+          link.classList.add('active');
+        }
       }
-    }
-    // その他のページの判定
-    else if (linkPath && linkPath.includes(currentPage)) {
-      link.classList.add('active');
-    }
-    // ディレクトリベースの判定
-    else if (currentPath.includes('/team/') && linkPath && linkPath.includes('/team/')) {
-      if (currentPage === 'index.html' && linkPath.includes('team/index.html')) {
-        link.classList.add('active');
-      }
-    }
-    else if (currentPath.includes('/schedule/') && linkPath && linkPath.includes('/schedule/')) {
-      document.querySelector('a[href*="/schedule/"]')?.classList.add('active');
-    }
-    else if (currentPath.includes('/news/') && linkPath && linkPath.includes('/news/')) {
-      document.querySelector('a[href*="/news/"]')?.classList.add('active');
-    }
-    else if (currentPath.includes('/access/') && linkPath && linkPath.includes('/access/')) {
-      document.querySelector('a[href*="/access/"]')?.classList.add('active');
-    }
-    else if (currentPath.includes('/contact/') && linkPath && linkPath.includes('/contact/')) {
-      document.querySelector('a[href*="/contact/"]')?.classList.add('active');
-    }
-  });
+    });
+  }
 
   // ========== スクロール時のヘッダー処理 ==========
   const header = document.querySelector('.header');

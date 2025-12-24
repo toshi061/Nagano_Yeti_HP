@@ -5,8 +5,8 @@
  */
 function getDataPath() {
   const path = window.location.pathname;
-  // team/index.html, news/index.html の場合
-  if (path.includes('/team/') || path.includes('/news/')) {
+  // team/index.html, news/index.html, sponsors/index.html の場合
+  if (path.includes('/team/') || path.includes('/news/') || path.includes('/sponsors/')) {
     return '../data';
   }
   // index.html の場合
@@ -123,9 +123,15 @@ async function loadNews() {
  * @returns {string} HTMLマークアップ
  */
 function createPlayerCardHTML(player) {
+  const dataPath = getDataPath();
+  // 画像のパス: dataPathから一つ上の階層のimages/playersフォルダ
+  const imagePath = player.image
+    ? `${dataPath}/../images/players/${player.image}`
+    : '';
+
   return `
     <div class="player-card-full" data-position="${player.position}">
-      <div class="player-image-full">
+      <div class="player-image-full" ${imagePath ? `style="background-image: url('${imagePath}')"` : ''}>
         <div class="player-number-full">${player.number}</div>
         <div class="player-position-badge">${player.position}</div>
       </div>
@@ -164,10 +170,15 @@ function createPlayerCardHTML(player) {
  * @returns {string} HTMLマークアップ
  */
 function createStaffCardHTML(staff) {
+  const dataPath = getDataPath();
+  const imagePath = staff.image
+    ? `${dataPath}/../images/staff/${staff.image}`
+    : '';
+
   return `
     <div class="staff-card">
-      <div class="staff-image">
-        <div class="staff-icon">👤</div>
+      <div class="staff-image" ${imagePath ? `style="background-image: url('${imagePath}'); background-size: cover; background-position: center;"` : ''}>
+        ${!imagePath ? '<div class="staff-icon">👤</div>' : ''}
       </div>
       <div class="staff-info">
         <h3 class="staff-name">${staff.name}</h3>
@@ -184,10 +195,16 @@ function createStaffCardHTML(staff) {
  * @returns {string} HTMLマークアップ
  */
 function createNewsArticleHTML(article) {
+  const dataPath = getDataPath();
+  // 画像のパス
+  const imagePath = article.image
+    ? `${dataPath}/../images/news/${article.image}`
+    : '';
+
   return `
     <article class="news-article" data-category="${article.category}">
-      <div class="article-image">
-        <div class="article-placeholder">${article.icon}</div>
+      <div class="article-image" ${imagePath ? `style="background-image: url('${imagePath}'); background-size: cover; background-position: center;"` : ''}>
+        ${!imagePath ? `<div class="article-placeholder">${article.icon}</div>` : ''}
         <span class="article-badge ${article.badgeClass}">${article.badge}</span>
       </div>
       <div class="article-content">
@@ -221,4 +238,84 @@ function createSimpleNewsCardHTML(article) {
       </div>
     </a>
   `;
+}
+
+/**
+ * スポンサーデータを読み込む
+ * @returns {Promise<Array>} スポンサーの配列
+ */
+async function loadSponsors() {
+  const sponsorFiles = [
+    'nagano-sports',
+    'shinshu-construction',
+    'nagano-daiichi-bank',
+    'shinshu-foods',
+    'nagano-automobile',
+    'nagano-medical-clinic',
+    'shinshu-printing',
+    'nagano-real-estate',
+    'shinshu-hotel',
+    'nagano-advertising',
+    'shinshu-it'
+  ];
+
+  const dataPath = getDataPath();
+  const sponsors = [];
+  for (const file of sponsorFiles) {
+    try {
+      const response = await fetch(`${dataPath}/sponsors/${file}.json`);
+      if (response.ok) {
+        const sponsor = await response.json();
+        sponsors.push(sponsor);
+      }
+    } catch (error) {
+      console.error(`Failed to load sponsor: ${file}`, error);
+    }
+  }
+
+  return sponsors;
+}
+
+/**
+ * スポンサーカードHTMLを生成
+ * @param {Object} sponsor スポンサーデータ
+ * @returns {string} HTMLマークアップ
+ */
+function createSponsorCardHTML(sponsor) {
+  const dataPath = getDataPath();
+  const imagePath = sponsor.image
+    ? `${dataPath}/../images/sponsors/${sponsor.image}`
+    : '';
+
+  // tierに応じたクラス名
+  const tierClass = sponsor.tier; // gold, silver, bronze
+
+  // ゴールド・シルバーは大きいカード、ブロンズは小さいカード
+  if (sponsor.tier === 'bronze') {
+    return `
+      <div class="sponsor-card ${tierClass}">
+        <div class="sponsor-logo small" ${imagePath ? `style="background-image: url('${imagePath}'); background-size: contain; background-repeat: no-repeat; background-position: center;"` : ''}>
+          ${!imagePath ? '<div class="logo-placeholder">LOGO</div>' : ''}
+        </div>
+        <div class="sponsor-info">
+          <h3 class="sponsor-name">${sponsor.name}</h3>
+          <p class="sponsor-category">${sponsor.category}</p>
+        </div>
+      </div>
+    `;
+  } else {
+    return `
+      <div class="sponsor-card ${tierClass}">
+        <div class="sponsor-logo" ${imagePath ? `style="background-image: url('${imagePath}'); background-size: contain; background-repeat: no-repeat; background-position: center;"` : ''}>
+          ${!imagePath ? '<div class="logo-placeholder">LOGO</div>' : ''}
+        </div>
+        <div class="sponsor-info">
+          <h3 class="sponsor-name">${sponsor.name}</h3>
+          <p class="sponsor-category">${sponsor.category}</p>
+          <p class="sponsor-description">${sponsor.description}</p>
+          <a href="${sponsor.website}" class="sponsor-website">ウェブサイト →</a>
+        </div>
+      </div>
+    `;
+  }
 }

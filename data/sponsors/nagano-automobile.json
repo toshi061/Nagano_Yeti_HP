@@ -1,0 +1,9 @@
+{
+  "id": "nagano-automobile",
+  "name": "長野自動車株式会社",
+  "category": "自動車販売",
+  "tier": "silver",
+  "description": "新車・中古車の販売からメンテナンスまで。チームの移動をサポートしています。",
+  "website": "#",
+  "image": "nagano-automobile.jpg"
+}
